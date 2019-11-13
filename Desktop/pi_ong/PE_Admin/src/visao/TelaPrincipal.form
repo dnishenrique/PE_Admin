@@ -50,6 +50,23 @@
             <Property name="text" type="java.lang.String" value="Ferramentas"/>
           </Properties>
         </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuAjuda">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ajuda"/>
+          </Properties>
+          <SubComponents>
+            <Menu class="javax.swing.JMenu" name="jMenuItemAjuAjuda">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ajuda"/>
+              </Properties>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="jMenuItemAjuSobre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sobre"/>
+              </Properties>
+            </Menu>
+          </SubComponents>
+        </Menu>
         <Menu class="javax.swing.JMenu" name="jMenuSair">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sair"/>

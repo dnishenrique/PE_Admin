@@ -36,6 +36,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuRelatorios = new javax.swing.JMenu();
         jMenuBeneficios = new javax.swing.JMenu();
         jMenuFerramentas = new javax.swing.JMenu();
+        jMenuAjuda = new javax.swing.JMenu();
+        jMenuItemAjuAjuda = new javax.swing.JMenu();
+        jMenuItemAjuSobre = new javax.swing.JMenu();
         jMenuSair = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
 
@@ -74,6 +77,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuFerramentas.setText("Ferramentas");
         jMenuBar1.add(jMenuFerramentas);
+
+        jMenuAjuda.setText("Ajuda");
+
+        jMenuItemAjuAjuda.setText("Ajuda");
+        jMenuAjuda.add(jMenuItemAjuAjuda);
+
+        jMenuItemAjuSobre.setText("Sobre");
+        jMenuAjuda.add(jMenuItemAjuSobre);
+
+        jMenuBar1.add(jMenuAjuda);
 
         jMenuSair.setText("Sair");
 
@@ -155,11 +168,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenuAjuda;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuBeneficios;
     private javax.swing.JMenu jMenuBuscar;
     private javax.swing.JMenu jMenuCadastros;
     private javax.swing.JMenu jMenuFerramentas;
+    private javax.swing.JMenu jMenuItemAjuAjuda;
+    private javax.swing.JMenu jMenuItemAjuSobre;
     private javax.swing.JMenuItem jMenuItemCadCliente;
     private javax.swing.JMenuItem jMenuItemCadUsuario;
     private javax.swing.JMenuItem jMenuItemSair;
