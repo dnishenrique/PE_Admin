@@ -55,16 +55,19 @@
             <Property name="text" type="java.lang.String" value="Ajuda"/>
           </Properties>
           <SubComponents>
-            <Menu class="javax.swing.JMenu" name="jMenuItemAjuAjuda">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemAjuAjuda">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ajuda"/>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenuItemAjuSobre">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItemAjuSobre">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sobre"/>
               </Properties>
-            </Menu>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemAjuSobreActionPerformed"/>
+              </Events>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenuSair">

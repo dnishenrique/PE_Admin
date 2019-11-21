@@ -37,8 +37,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBeneficios = new javax.swing.JMenu();
         jMenuFerramentas = new javax.swing.JMenu();
         jMenuAjuda = new javax.swing.JMenu();
-        jMenuItemAjuAjuda = new javax.swing.JMenu();
-        jMenuItemAjuSobre = new javax.swing.JMenu();
+        jMenuItemAjuAjuda = new javax.swing.JMenuItem();
+        jMenuItemAjuSobre = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
 
@@ -84,6 +84,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuAjuda.add(jMenuItemAjuAjuda);
 
         jMenuItemAjuSobre.setText("Sobre");
+        jMenuItemAjuSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAjuSobreActionPerformed(evt);
+            }
+        });
         jMenuAjuda.add(jMenuItemAjuSobre);
 
         jMenuBar1.add(jMenuAjuda);
@@ -132,6 +137,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
+    private void jMenuItemAjuSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAjuSobreActionPerformed
+        
+        TelaSobre tela = new TelaSobre();
+        tela.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemAjuSobreActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -174,8 +186,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuBuscar;
     private javax.swing.JMenu jMenuCadastros;
     private javax.swing.JMenu jMenuFerramentas;
-    private javax.swing.JMenu jMenuItemAjuAjuda;
-    private javax.swing.JMenu jMenuItemAjuSobre;
+    private javax.swing.JMenuItem jMenuItemAjuAjuda;
+    private javax.swing.JMenuItem jMenuItemAjuSobre;
     private javax.swing.JMenuItem jMenuItemCadCliente;
     private javax.swing.JMenuItem jMenuItemCadUsuario;
     private javax.swing.JMenuItem jMenuItemSair;
