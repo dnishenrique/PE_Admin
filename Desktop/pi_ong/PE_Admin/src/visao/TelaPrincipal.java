@@ -31,7 +31,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuBuscar = new javax.swing.JMenu();
         jMenuCadastros = new javax.swing.JMenu();
-        jMenuItemCadCliente = new javax.swing.JMenuItem();
+        jMenuItemCadBeneficiario = new javax.swing.JMenuItem();
         jMenuItemCadUsuario = new javax.swing.JMenuItem();
         jMenuRelatorios = new javax.swing.JMenu();
         jMenuBeneficios = new javax.swing.JMenu();
@@ -40,7 +40,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItemAjuAjuda = new javax.swing.JMenuItem();
         jMenuItemAjuSobre = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenu();
-        jMenuItemSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CENTRO SOCIAL PARQUE ESTORIL");
@@ -50,13 +49,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuCadastros.setText("Cadastros");
 
-        jMenuItemCadCliente.setText("Cliente");
-        jMenuItemCadCliente.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemCadBeneficiario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, 0));
+        jMenuItemCadBeneficiario.setText("Beneficiários");
+        jMenuItemCadBeneficiario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemCadClienteActionPerformed(evt);
+                jMenuItemCadBeneficiarioActionPerformed(evt);
             }
         });
-        jMenuCadastros.add(jMenuItemCadCliente);
+        jMenuCadastros.add(jMenuItemCadBeneficiario);
 
         jMenuItemCadUsuario.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
         jMenuItemCadUsuario.setText("Usuários");
@@ -73,6 +73,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenuRelatorios);
 
         jMenuBeneficios.setText("Benefícios");
+        jMenuBeneficios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jMenuBeneficios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuBeneficiosMousePressed(evt);
+            }
+        });
         jMenuBar1.add(jMenuBeneficios);
 
         jMenuFerramentas.setText("Ferramentas");
@@ -80,9 +86,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuAjuda.setText("Ajuda");
 
+        jMenuItemAjuAjuda.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F7, 0));
         jMenuItemAjuAjuda.setText("Ajuda");
         jMenuAjuda.add(jMenuItemAjuAjuda);
 
+        jMenuItemAjuSobre.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F8, 0));
         jMenuItemAjuSobre.setText("Sobre");
         jMenuItemAjuSobre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,15 +102,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenuAjuda);
 
         jMenuSair.setText("Sair");
-
-        jMenuItemSair.setText("Sair");
-        jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemSairActionPerformed(evt);
+        jMenuSair.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuSairMousePressed(evt);
             }
         });
-        jMenuSair.add(jMenuItemSair);
-
         jMenuBar1.add(jMenuSair);
 
         setJMenuBar(jMenuBar1);
@@ -122,9 +126,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItemCadClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadClienteActionPerformed
+   
+    private void jMenuItemCadBeneficiarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadBeneficiarioActionPerformed
+        TCadastroBeneficiario tela = new TCadastroBeneficiario();
+        tela.setVisible(true);
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItemCadClienteActionPerformed
+    }//GEN-LAST:event_jMenuItemCadBeneficiarioActionPerformed
 
     private void jMenuItemCadUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCadUsuarioActionPerformed
         
@@ -133,16 +140,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemCadUsuarioActionPerformed
 
-    private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jMenuItemSairActionPerformed
-
     private void jMenuItemAjuSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAjuSobreActionPerformed
         
         TelaSobre tela = new TelaSobre();
         tela.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemAjuSobreActionPerformed
+
+    private void jMenuBeneficiosMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuBeneficiosMousePressed
+        TelaBeneficios tela = new TelaBeneficios();
+        tela.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuBeneficiosMousePressed
+
+    private void jMenuSairMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuSairMousePressed
+        System.exit(0);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuSairMousePressed
 
     /**
      * @param args the command line arguments
@@ -188,9 +202,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuFerramentas;
     private javax.swing.JMenuItem jMenuItemAjuAjuda;
     private javax.swing.JMenuItem jMenuItemAjuSobre;
-    private javax.swing.JMenuItem jMenuItemCadCliente;
+    private javax.swing.JMenuItem jMenuItemCadBeneficiario;
     private javax.swing.JMenuItem jMenuItemCadUsuario;
-    private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenu jMenuRelatorios;
     private javax.swing.JMenu jMenuSair;
     // End of variables declaration//GEN-END:variables
